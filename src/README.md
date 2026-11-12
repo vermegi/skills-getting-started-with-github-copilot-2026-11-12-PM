@@ -25,6 +25,20 @@ A super simple FastAPI application that allows students to view and sign up for 
    - API documentation: http://localhost:8000/docs
    - Alternative documentation: http://localhost:8000/redoc
 
+## Testing
+
+From the repository root, install dependencies and run the backend tests:
+
+```bash
+python -m pip install -r requirements.txt
+python -m pytest tests/
+```
+
+Tests live in the root-level `tests/` directory and follow the
+Arrange-Act-Assert (AAA) pattern. Each test receives an isolated copy of the
+in-memory activity data. FastAPI's TestClient runs requests in-process, so no
+running server is required.
+
 ## API Endpoints
 
 | Method | Endpoint                                                          | Description                                                         |
